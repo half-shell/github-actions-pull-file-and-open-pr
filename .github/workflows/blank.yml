@@ -40,7 +40,7 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           cwd: './test/'
-          add: 'mailibex/lib/'
+          add: '.'
           new_branch: 'workflow-update'
           author_name: half-shell
           author_email: mmaubert@protonmail.com
