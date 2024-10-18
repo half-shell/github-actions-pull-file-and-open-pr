@@ -33,7 +33,7 @@ jobs:
         run: |
           ls -al test/
           ls -al mailibex/
-          cp -r mailibex/lib/
+          cp -r mailibex/lib/ test/
           cd mailibex && git status && cd ..
 
       - name: 'Add and commit'
