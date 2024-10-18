@@ -34,7 +34,7 @@ jobs:
           ls -al test/
           ls -al mailibex/
           cp -r mailibex/lib/ test/
-          cd mailibex && git status && cd ..
+          cd test && git status && cd ..
 
       - name: 'Add and commit'
         uses: EndBug/add-and-commit@v9
