@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: "Checking out..."
         uses: actions/checkout@v4
+        with:
+          path: test
 
       - name: "git status from first checkout"
         run: |
@@ -34,9 +36,14 @@ jobs:
       - name: "git status from second checkout"
         run: |
           git status
+          ls -al test/
+          ls -al mailibex/
 
       - name: 'Add and commit'
         uses: EndBug/add-and-commit@v9
         with:
-          add: '.'
+          cwd: './test/'
+          add: 'mailibex/lib/'
           new_branch: 'workflow-update'
+          author_name: half-shell
+          author_email: mmaubert@protonmail.com
