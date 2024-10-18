@@ -25,9 +25,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: "half-shell/mailibex"
+          path: mailibex
 
       - name: 'Add and commit'
         uses: EndBug/add-and-commit@v9
         with:
-          add: 'lib'
+          add: 'mailibex/lib/*'
           new_branch: 'workflow-update'
