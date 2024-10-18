@@ -23,10 +23,6 @@ jobs:
         with:
           path: test
 
-      - name: "git status from first checkout"
-        run: |
-          git status
-
       - name: "Checking out from other repo"
         uses: actions/checkout@v4
         with:
@@ -35,9 +31,10 @@ jobs:
 
       - name: "git status from second checkout"
         run: |
-          git status
           ls -al test/
           ls -al mailibex/
+          cp -r mailibex/lib/
+          cd mailibex && git status && cd ..
 
       - name: 'Add and commit'
         uses: EndBug/add-and-commit@v9
