@@ -21,14 +21,22 @@ jobs:
       - name: "Checking out..."
         uses: actions/checkout@v4
 
+      - name: "git status from first checkout"
+        run: |
+          git status
+
       - name: "Checking out from other repo"
         uses: actions/checkout@v4
         with:
-          repository: "half-shell/mailibex"
+          repository: half-shell/mailibex
           path: mailibex
+
+      - name: "git status from second checkout"
+        run: |
+          git status
 
       - name: 'Add and commit'
         uses: EndBug/add-and-commit@v9
         with:
-          add: 'mailibex/lib/*'
+          add: '.'
           new_branch: 'workflow-update'
