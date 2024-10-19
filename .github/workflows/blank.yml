@@ -28,6 +28,7 @@ jobs:
         with:
           repository: half-shell/mailibex
           path: mailibex
+          sparse-checkout: yaml/
 
       - name: "git status from second checkout"
         run: |
